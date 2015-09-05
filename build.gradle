@@ -1,0 +1,22 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+group = 'geekycamp'
+version = '1.0-SNAPSHOT'
+
+description = """geekycamp-jax-rs"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.1.0'
+    compile group: 'org.jboss.resteasy', name: 'jaxrs-api', version:'3.0.11.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version:'3.0.11.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jackson2-provider', version:'3.0.11.Final'
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+}
